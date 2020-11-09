@@ -10,10 +10,9 @@ body {
 
 .aside {
     width: 150px;
-    min-height: 100vh;
     height: 100%;
     background-color: #282d32;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     padding: 10px;
@@ -22,7 +21,6 @@ body {
 
 .main-content {
     margin-left: 150px;
-    padding: 10px;
     min-height: 200vh;
 }
 
@@ -58,6 +56,7 @@ body {
     padding: 0;
     margin: 0;
     padding: 20px 0;
+    
 }
 
 .nav > ul li{
@@ -73,6 +72,7 @@ body {
 }
 .nav {
     position: relative;
+    opacity: 0.5;
 }
 .nav::before, .nav::after {
     display: block;
@@ -92,10 +92,29 @@ body {
 }
 /*/nav*/
 
+/*input toggle*/
+.toggle {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.nav svg {
+    fill: #FFFFFF;
+    width: 30px;
+    text-align: right;
+}
+
+.toggle:checked ~ ul {
+    display:none
+}
+/*/toggle*/
+
 /*search-icon*/
 .search-icon {
     padding: 20px 0;
     text-align: center;
+    opacity: 0.5;
 }
 
 .search-icon svg {
@@ -114,9 +133,6 @@ body {
 	padding: 200px 325px;
 }
 
-.title {
-    height: 835px;
-}
 /*title-content*/
 
 .title-content > h1 {
@@ -169,29 +185,15 @@ body {
 }
 
 .services > .item {
-    width: 363px;
-    height: 450px;
+    min-height: 380px;
+    min-width: 300px;
+    max-height: 450px;
+    max-width: 363px;
     border-radius: 6px;
     background-color: #f6f6f6;
     margin: 30px;
     position: relative;
     text-align: center;
-}
-
-.services .content {
-    padding: 51px 0px;
-}
-
-.services .content > h3 {
-    text-transform: uppercase;
-    text-align: center;
-    color: #353a3f;
-}
-
-.services > p {
-    text-align: center;
-    font-family: Poppins;
-    padding: 0px 62px;
 }
 
 .services .icon {
@@ -208,9 +210,20 @@ body {
     transform: translateX(-50%);
 }
 
+.services .content {
+    padding: 106px 62px 35px 62px;
+}
 
+.services .content > h3 {
+    text-transform: uppercase;
+    text-align: center;
+    color: #353a3f;
+}
 
-/*/services*/
+.services > p {
+    text-align: center;
+    font-family: Poppins;
+}
 
 
 .services .button {
@@ -222,10 +235,7 @@ body {
     background-color: #4cb480;
     color: #FFFFFF;
 }
-
-.feedback {
-    height: 600px;
-}
+/*/services*/
 
 .feed-text {
 	font-style: italic;
@@ -246,6 +256,9 @@ body {
 	position: relative;
     padding: 20px 0px;
     color: #8c9198;
+    font-family: "poppins medium";
+    font-weight: 500;
+    font-style: normal;
 }
 
 .blog {
@@ -293,13 +306,15 @@ body {
 
 
 .footer {
-	position: relative;
-	bottom: 0;
-	height: 140px;
+    position: relative;
+	bottom: -10px;
+    height: 140px;
+    font-size: 18px;
 }
 
 .nav-foot {
-	color: #FFFFFF;
+    color: #FFFFFF;
+    opacity: 0.5;
 	font-size: 18px;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -307,7 +322,9 @@ body {
 }
 
 .footer > p {
-	padding: 0px 62px;
+    opacity: 0.3;
+    padding: 0px 62px;
+    font-size: 16px;
 }
 
 
@@ -318,6 +335,22 @@ body {
         flex-direction: column;
     }
 }
+
+@media (max-width: 640px) {
+    .aside {
+        width: 100%;
+        height: auto;
+        background-color: #282d32;
+        position: relative;
+        padding: 10px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+}
+
 
 /*
 iPhone X
