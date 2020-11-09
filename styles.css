@@ -1,0 +1,303 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* background: red; */
+    margin: 0;
+    font-family: "poppins", "Arial", sans-serif;
+}
+
+.aside {
+    width: 150px;
+    height: 100vh;
+    background-color: #282d32;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+
+
+.main-content {
+    margin-left: 150px;
+    padding: 10px;
+    min-height: 200vh;
+}
+
+/*logo*/
+.logo {
+    text-align: center;
+    position: relative;
+}
+
+	.logo > p {
+		font-size: 32px;
+		color: #4cb480;
+		text-transform: uppercase;
+	}
+
+	.logo > p:after {
+		display: block;
+		content: "";
+		width: 50px;
+		height: 4px;
+		background: #4cb480;
+		position: absolute;
+		bottom: -8px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+/*/logo*/
+
+/*nav*/
+.nav > ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.nav > ul li{
+    margin-bottom: 15px;
+}
+
+
+.nav ul li a {
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.nav {
+    position: relative;
+}
+.nav::before, .nav::after {
+    display: block;
+    content: "";
+    width: 90px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav::after {
+    top: auto;
+    bottom: 0;
+}
+/*/nav*/
+
+/*search-icon*/
+.search-icon {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.search-icon svg {
+    fill: white;
+    width: 35px;
+}
+/*/search-icon*/
+
+.colored-bg {
+	background-color: #808080;
+	color: #FFFFFF;
+}
+
+.padding-left {
+	text-align: left;
+	padding: 50px 300px;
+}
+
+
+.title .title-subt {
+	text-transform: uppercase;
+}
+
+
+.title-page::before {
+	background-color: #FFFFFF;
+	content: "";
+	position: absolute;
+	top: -10px;
+	left: 0;
+	height: 3px;
+	width: 30px;
+}
+
+.title-page {
+	position: relative;
+	text-transform: uppercase;
+}
+
+.button-hover:hover, .services .button-hover:hover {
+	color: #000000;
+	background-color: #20B2AA;
+}
+
+.button-left {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 160px;
+    height: 55px;
+    border-radius: 28px;
+    background-color: #4cb480;
+    color: #FFFFFF;
+}
+
+.services {
+    display: flex;
+}
+
+.services > .item {
+    border-radius: 6px;
+    background-color: #dddddd;
+    margin: 25px 30px;
+    padding: 25px 62px;
+}
+
+.services .item-title {
+    text-transform: uppercase;
+    text-align: center;
+    color: #353a3f;
+}
+
+.services .item-desc {
+    text-align: center;
+    font-family: Poppins;
+}
+
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+    }
+}
+
+.services .button {
+    position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+	text-transform: uppercase;
+    text-align: center;
+    width: 160px;
+    height: 55px;
+    border-radius: 28px;
+    background-color: #4cb480;
+    color: #FFFFFF;
+}
+
+
+
+.feed-text {
+	font-style: italic;
+}
+
+.feed-author::before {
+	background-color: #FFFFFF;
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 0;
+	height: 3px;
+	width: 30px;
+}
+
+.feed-author {
+	position: relative;
+	padding: 20px 0px;
+}
+
+.blog {
+	padding: 62px 62px;
+}
+
+
+.blog-title::before {
+	background-color: #000000;
+	content: "";
+	position: absolute;
+	top: -10px;
+	left: 0;
+	height: 3px;
+	width: 30px;
+}
+
+.blog-title {
+	position: relative;
+	text-transform: uppercase;
+}
+
+.blog-item {
+	display: flex;
+	justify-content: space-between;
+}
+
+.blog-content {
+	width: 700px;
+}
+
+.image {
+	padding: 10px 0px;
+	margin: 10px 0px;
+}
+
+
+
+.footer {
+	position: relative;
+	bottom: 0;
+	height: 140px;
+}
+
+.nav-foot {
+	color: #FFFFFF;
+	font-size: 18px;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 40px 62px 0px 62px;
+}
+
+.footer > p {
+	padding: 0px 62px;
+}
+
+
+
+/*
+iPhone X
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { }
+
+iPhone 8
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 667px) 
+    and (-webkit-device-pixel-ratio : 2) { }
+
+iPhone 8 Plus
+@media only screen 
+    and (device-width : 414px) 
+    and (device-height : 736px) 
+    and (-webkit-device-pixel-ratio : 3) { }
+
+iPhone 6+/6s+/7+/8+ share the same sizes, while the iPhone 7/8 also do.
+
+Looking for a specific orientation ?
+
+Portrait
+Add the following rule:
+
+    and (orientation : portrait) 
+	
+Landscape
+Add the following rule:
+
+    and (orientation : landscape) 
+*/
