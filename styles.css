@@ -10,7 +10,7 @@ body {
 
 .aside {
     width: 150px;
-    height: 100vh;
+    height: 330vh;
     background-color: #282d32;
     position: absolute;
     top: 0;
@@ -104,7 +104,7 @@ body {
 /*/search-icon*/
 
 .colored-bg {
-	background-color: #808080;
+	background-color: #353a3f;
 	color: #FFFFFF;
 }
 
@@ -150,13 +150,14 @@ body {
     color: #FFFFFF;
 }
 
+/*services*/
 .services {
     display: flex;
 }
 
 .services > .item {
     border-radius: 6px;
-    background-color: #dddddd;
+    background-color: #f6f6f6;
     margin: 25px 30px;
     padding: 25px 62px;
 }
@@ -172,6 +173,35 @@ body {
     font-family: Poppins;
 }
 
+.services .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services .icon {
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    max-width: 80px;
+    max-height: 80px;
+    position: relative;
+    left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.services .icon {
+    font-size: 1rem;
+}
+
+
+
+
+/*/services*/
 @media (max-width: 768px) {
     .services {
         flex-direction: column;
