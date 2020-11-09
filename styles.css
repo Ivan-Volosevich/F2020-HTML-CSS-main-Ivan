@@ -10,7 +10,8 @@ body {
 
 .aside {
     width: 150px;
-    height: 330vh;
+    min-height: 100vh;
+    height: 100%;
     background-color: #282d32;
     position: absolute;
     top: 0;
@@ -110,28 +111,38 @@ body {
 
 .padding-left {
 	text-align: left;
-	padding: 50px 300px;
+	padding: 200px 325px;
 }
 
+.title {
+    height: 835px;
+}
+/*title-content*/
 
-.title .title-subt {
+.title-content > h1 {
+    position: relative;
 	text-transform: uppercase;
+    font-size: 62px;
 }
 
+.title-content > h3 {
+    text-transform: uppercase;
+    font-size: 30px;
+}
 
-.title-page::before {
-	background-color: #FFFFFF;
+.title-content > h3 {
+    font-size: 22px;
+}
+
+.title-content h1:before {
+	background-color: #4cb480;
 	content: "";
 	position: absolute;
 	top: -10px;
 	left: 0;
-	height: 3px;
-	width: 30px;
-}
-
-.title-page {
-	position: relative;
-	text-transform: uppercase;
+	height: 4px;
+    width: 60px;
+    border-radius: 2px;
 }
 
 .button-hover:hover, .services .button-hover:hover {
@@ -143,9 +154,9 @@ body {
     position: relative;
     text-align: center;
     text-transform: uppercase;
-    width: 160px;
-    height: 55px;
-    border-radius: 28px;
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
     background-color: #4cb480;
     color: #FFFFFF;
 }
@@ -153,66 +164,57 @@ body {
 /*services*/
 .services {
     display: flex;
+    padding: 120px 90px;
+    
 }
 
 .services > .item {
+    width: 363px;
+    height: 450px;
     border-radius: 6px;
     background-color: #f6f6f6;
-    margin: 25px 30px;
-    padding: 25px 62px;
+    margin: 30px;
+    position: relative;
+    text-align: center;
 }
 
-.services .item-title {
+.services .content {
+    padding: 51px 0px;
+}
+
+.services .content > h3 {
     text-transform: uppercase;
     text-align: center;
     color: #353a3f;
 }
 
-.services .item-desc {
+.services > p {
     text-align: center;
     font-family: Poppins;
-}
-
-.services .icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0px 62px;
 }
 
 .services .icon {
     background: #FFFFFF;
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    max-width: 80px;
-    max-height: 80px;
-    position: relative;
+    position: absolute;
+    top: -55px;
     left: 50%;
-	transform: translate(-50%, 0);
+    transform: translateX(-50%);
 }
-
-.services .icon {
-    font-size: 1rem;
-}
-
 
 
 
 /*/services*/
-@media (max-width: 768px) {
-    .services {
-        flex-direction: column;
-    }
-}
+
 
 .services .button {
-    position: relative;
-	left: 50%;
-	transform: translate(-50%, 0);
-	text-transform: uppercase;
+    text-transform: uppercase;
     text-align: center;
     width: 160px;
     height: 55px;
@@ -221,25 +223,29 @@ body {
     color: #FFFFFF;
 }
 
-
+.feedback {
+    height: 600px;
+}
 
 .feed-text {
 	font-style: italic;
 }
 
 .feed-author::before {
-	background-color: #FFFFFF;
-	content: "";
+    background-color: #8c9198;
+    content: "";
 	position: absolute;
 	top: 10px;
 	left: 0;
-	height: 3px;
-	width: 30px;
+	height: 5px;
+    width: 60px;
+    border-radius: 2px;
 }
 
 .feed-author {
 	position: relative;
-	padding: 20px 0px;
+    padding: 20px 0px;
+    color: #8c9198;
 }
 
 .blog {
@@ -248,13 +254,14 @@ body {
 
 
 .blog-title::before {
-	background-color: #000000;
+	background-color: #4cb480;
 	content: "";
 	position: absolute;
 	top: -10px;
 	left: 0;
-	height: 3px;
-	width: 30px;
+	height: 4px;
+    width: 60px;
+    border-radius: 2px;
 }
 
 .blog-title {
@@ -271,9 +278,16 @@ body {
 	width: 700px;
 }
 
+.button-blog {
+    width: 176px;
+    height: 55px;
+    border-radius: 28px;
+}
+
 .image {
 	padding: 10px 0px;
-	margin: 10px 0px;
+    margin: 10px 0px;
+    border-radius: 6px;
 }
 
 
@@ -297,6 +311,13 @@ body {
 }
 
 
+
+
+@media (max-width: 1200px) {
+    .services {
+        flex-direction: column;
+    }
+}
 
 /*
 iPhone X
