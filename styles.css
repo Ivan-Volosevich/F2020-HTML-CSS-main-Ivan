@@ -102,11 +102,10 @@ body {
 .nav svg {
     fill: #FFFFFF;
     width: 30px;
-    text-align: right;
 }
 
 .toggle:checked ~ ul {
-    display:none
+    display:none;
 }
 /*/toggle*/
 
@@ -130,8 +129,10 @@ body {
 
 .padding-left {
 	text-align: left;
-	padding: 200px 325px;
+	padding: 10% 15%;				/*200px 325px;*/
+	overflow: auto;
 }
+/*Чтобы такого не происходило, необходимо задать элементу свойство box-sizing в значении border-box (по умолчанию оно в значении content-box):*/
 
 /*title-content*/
 
@@ -144,10 +145,6 @@ body {
 .title-content > h3 {
     text-transform: uppercase;
     font-size: 30px;
-}
-
-.title-content > h3 {
-    font-size: 22px;
 }
 
 .title-content h1:before {
@@ -180,62 +177,69 @@ body {
 /*services*/
 .services {
     display: flex;
-    padding: 120px 90px;
-    
+    padding: 120px 90px;				/*7.84% 5.88%;*/			
 }
 
 .services > .item {
-    min-height: 380px;
-    min-width: 300px;
+    min-height: 360px;
+    min-width: 260px;
     max-height: 450px;
     max-width: 363px;
     border-radius: 6px;
-    background-color: #f6f6f6;
+    background-color: #808080;			/*#f6f6f6*/
     margin: 30px;
     position: relative;
     text-align: center;
 }
 
-.services .icon {
-    background: #FFFFFF;
-    border-radius: 50%;
-    width: 110px;
-    height: 110px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -55px;
-    left: 50%;
-    transform: translateX(-50%);
-}
+	.services .icon {
+		background: #FFFFFF;
+		border-radius: 50%;
+		width: 110px;
+		height: 110px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: -55px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 
-.services .content {
-    padding: 106px 62px 35px 62px;
-}
+	.services .content {
+		padding: 106px 62px 35px 62px;
+	}
 
-.services .content > h3 {
-    text-transform: uppercase;
-    text-align: center;
-    color: #353a3f;
-}
+	.services .content > h3 {
+		text-transform: uppercase;
+		text-align: center;
+		color: #353a3f;
+	}
 
-.services > p {
-    text-align: center;
-    font-family: Poppins;
-}
+	.services > p {
+		text-align: center;
+		font-family: Poppins;
+	}
 
 
-.services .button {
-    text-transform: uppercase;
-    text-align: center;
-    width: 160px;
-    height: 55px;
-    border-radius: 28px;
-    background-color: #4cb480;
-    color: #FFFFFF;
-}
+	.services .button {
+		text-transform: uppercase;
+		text-align: center;
+		width: 160px;
+		height: 55px;
+		border-radius: 28px;
+		background-color: #4cb480;
+		color: #FFFFFF;
+		margin-bottom: 35px;
+	}
 /*/services*/
+
+.feedback {
+	background-image: url(./Images/Quote/QuoteBig.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 20%; 
+}
 
 .feed-text {
 	font-style: italic;
@@ -262,7 +266,7 @@ body {
 }
 
 .blog {
-	padding: 62px 62px;
+	padding: 4.05%;
 }
 
 
@@ -280,15 +284,16 @@ body {
 .blog-title {
 	position: relative;
 	text-transform: uppercase;
+	font-size: 50px;
 }
 
 .blog-item {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
-.blog-content {
-	width: 700px;
+.blog-right {
+	padding: 20px 40px;
 }
 
 .button-blog {
@@ -297,43 +302,61 @@ body {
     border-radius: 28px;
 }
 
-.image {
+.blog img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+	min-width: 180px;
+	position: relative;
 	padding: 10px 0px;
     margin: 10px 0px;
     border-radius: 6px;
 }
 
 
-
+/*footer*/
 .footer {
-    position: relative;
-	bottom: -10px;
-    height: 140px;
-    font-size: 18px;
+    display: flex;
+	justify-content: space-between;
 }
 
-.nav-foot {
-    color: #FFFFFF;
-    opacity: 0.5;
-	font-size: 18px;
-	text-transform: uppercase;
-	text-decoration: none;
-	padding: 40px 62px 0px 62px;
+.foot-contacts {
+	padding-top: 40px;
+	height: auto;
 }
 
-.footer > p {
-    opacity: 0.3;
-    padding: 0px 62px;
-    font-size: 16px;
+	.nav-foot > a{
+		text-decoration: none;
+		color: #FFFFFF;
+		opacity: 0.5;
+		font-size: 18px;
+		text-transform: uppercase;
+		margin: 0px 20px;
+	}
+
+	.foot-contacts > p {
+		opacity: 0.3;
+		margin-left: 20px;
+		}
+
+.icons-network {
+	padding-right: 100px;
+	padding-top: 50px;
+	letter-spacing: 20px;
 }
 
-
+/*/footer*/
 
 
 @media (max-width: 1200px) {
     .services {
         flex-direction: column;
+		justify-content: space-between;
     }
+	
+	.feedback {
+		background-size: 25%; 
+}
 }
 
 @media (max-width: 640px) {
@@ -349,8 +372,33 @@ body {
         margin-left: 0;
         padding: 10px;
     }
+	
+	.feedback {
+		background-size: 40%; 
 }
 
+	.blog-item {
+        flex-direction: column;
+	}
+	
+	.footer {
+		flex-wrap: wrap-reverse;
+	}
+	
+	.icons-network {
+	padding-top: 20px;
+	padding-left: 20px;
+	align-items: center;
+	letter-spacing: 20px;
+}
+}
+
+@media (max-width: 480px) {
+	.services {
+		padding: 0px;		
+		margin-top: 60px;
+	}
+}
 
 /*
 iPhone X
