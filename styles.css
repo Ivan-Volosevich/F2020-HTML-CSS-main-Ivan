@@ -131,7 +131,7 @@ body {
 
 .padding-left {
 	text-align: left;
-	padding: 11% 22.6%;				/*200px 325px;*/
+	padding: 10.9% 22.5% 13.79% 22.5%;				/*200px 325px;*/
 	overflow: auto;
 }
 /*Чтобы такого не происходило, необходимо задать элементу свойство box-sizing в значении border-box (по умолчанию оно в значении content-box):*/
@@ -141,13 +141,25 @@ body {
 .title-content > h1 {
     position: relative;
 	text-transform: uppercase;
-    font-size: 61px;
-    letter-spacing: 5px;
+    font-size: 62px;
+	letter-spacing: 4px;
+	font-weight: bold;
+	margin-bottom: -7px;
 }
 
 .title-content > h3 {
     text-transform: uppercase;
-    font-size: 30px;
+	font-size: 30px;
+	letter-spacing: 1.93px;
+	margin-bottom: 0;
+}
+
+.title-content > p {
+    font-size: 22px;
+	letter-spacing: 0.18px;
+	margin-top: 12px;
+	margin-bottom: 52px;
+	line-height: 1.636;
 }
 
 .title-content h1:before {
@@ -155,7 +167,7 @@ body {
 	content: "";
 	position: absolute;
 	top: -10px;
-	left: 0;
+	left: -2px;
 	height: 4px;
     width: 60px;
     border-radius: 2px;
@@ -167,20 +179,23 @@ body {
 }
 
 .button-left {
-    position: relative;
+	position: relative;
+	font-size: 20px;
     text-align: center;
     text-transform: uppercase;
     width: 200px;
     height: 60px;
     border-radius: 30px;
     background-color: #4cb480;
-    color: #FFFFFF;
+	color: #FFFFFF;
+	font-weight: bold;
+	line-height: 2.8;
 }
 
 /*services*/
 .services {
     display: flex;
-    padding: 120px 90px;				/*7.84% 5.88%;*/			
+    padding: 6.2% 6.3%;		/*120px 90px;*/	
 }
 
 .services > .item {
@@ -189,8 +204,8 @@ body {
     max-height: 450px;
     max-width: 363px;
     border-radius: 6px;
-    background-color: #808080;			/*#f6f6f6*/
-    margin: 30px;
+    background-color: #f6f6f6;			/*#f6f6f6*/
+	margin: 30px;
     position: relative;
     text-align: center;
 }
@@ -210,18 +225,24 @@ body {
 	}
 
 	.services .content {
-		padding: 106px 62px 35px 62px;
+		padding: 105px 62px 7px 62px;
 	}
 
 	.services .content > h3 {
+		font-size: 30px;
+		font-weight: bold;
 		text-transform: uppercase;
 		text-align: center;
 		color: #353a3f;
+		margin: -11px;
+		letter-spacing: 1.9px;
 	}
 
-	.services > p {
-		text-align: center;
-		font-family: "poppins";
+	.services .content > p {
+		font-size: 18px;
+		line-height: 1.667	;
+		margin: 24px 0px;
+		letter-spacing: 0.25px;
 	}
 
 
@@ -233,26 +254,37 @@ body {
 		border-radius: 28px;
 		background-color: #4cb480;
 		color: #FFFFFF;
-		margin-bottom: 35px;
+		margin-bottom: 61px;
+		font-size: 18px;
+		font-weight: bold;
 	}
 /*/services*/
 
+/*feedback*/
 .feedback {
 	background-image: url(./Images/Quote/QuoteBig.png);
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 20%; 
+	background-size: 27%;
+	padding-bottom: 5.2564%;
+}
+.feedback img {
+	margin-top: -16px;
 }
 
 .feed-text {
+	font-size: 28px;
 	font-style: italic;
+	line-height: 1.39;
+	margin-top: 14px;
+	letter-spacing: 0.2px;
 }
 
 .feed-author::before {
     background-color: #8c9198;
     content: "";
 	position: absolute;
-	top: 10px;
+	top: 27px;
 	left: 0;
 	height: 5px;
     width: 60px;
@@ -260,25 +292,26 @@ body {
 }
 
 .feed-author {
+	font-size: 20px;
 	position: relative;
-    padding: 20px 0px;
+    padding: 46px 0px;
     color: #8c9198;
     font-family: "poppins medium";
-    font-weight: 500;
-    font-style: normal;
+    letter-spacing: 0.56px;
 }
+/*/feedback*/
 
+/*blog*/
 .blog {
-	padding: 4.05%;
+	padding: 6.98% 8.3% 5.98% 8.3%;
 }
-
 
 .blog-title::before {
 	background-color: #4cb480;
 	content: "";
 	position: absolute;
-	top: -10px;
-	left: 0;
+	top: -17px;
+    left: 3px
 	height: 4px;
     width: 60px;
     border-radius: 2px;
@@ -287,7 +320,8 @@ body {
 .blog-title {
 	position: relative;
 	text-transform: uppercase;
-	font-size: 50px;
+	font-size: 44px;
+	letter-spacing: 2.9px;
 }
 
 .blog-item {
@@ -296,56 +330,76 @@ body {
 }
 
 .blog-right {
-	padding: 20px 40px;
+	padding: 20px 0px 20px 40px;
+}
+
+.blog-content > h3 {
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 32px 39px -6px;
+	letter-spacing: 1.9px;
+}
+
+.blog-content > p {
+	font-size: 18px;
+	line-height: 1.667;
+	margin-left: 39px;
+	letter-spacing: 0.4px;
 }
 
 .button-blog {
     width: 176px;
     height: 55px;
-    border-radius: 28px;
+	border-radius: 28px;
+	font-size: 18px;
+	top: 12px;
+    left: 39px;
 }
 
 .blog img {
-	display: block;
-	height: auto;
-	max-width: 100%;
 	min-width: 180px;
 	position: relative;
-	padding: 10px 0px;
+	padding: 16.8px 0px;
     margin: 10px 0px;
-    border-radius: 6px;
+	border-radius: 6px;
 }
-
+/*/blog*/
 
 /*footer*/
 .footer {
     display: flex;
 	justify-content: space-between;
+	height: 56.3vh;
 }
 
 .foot-contacts {
-	padding-top: 40px;
-	height: auto;
+	padding: 72px 100px;
 }
 
 	.nav-foot > a{
+		font-size: 18px;
+		font-weight: bold;
 		text-decoration: none;
 		color: #FFFFFF;
 		opacity: 0.5;
-		font-size: 18px;
 		text-transform: uppercase;
 		margin: 0px 20px;
+		letter-spacing: 2px;
 	}
 
 	.foot-contacts > p {
+		font-size: 16px;
+		line-height: 1.875;
 		opacity: 0.3;
 		margin-left: 20px;
+		letter-spacing: 0.3px;
 		}
 
 .icons-network {
-	padding-right: 100px;
-	padding-top: 50px;
-	letter-spacing: 20px;
+	padding-right: 121px;
+	padding-top: 91px;
+	letter-spacing: 27px;
 }
 
 /*/footer*/
