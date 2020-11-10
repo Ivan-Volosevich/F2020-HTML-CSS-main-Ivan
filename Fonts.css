@@ -140,3 +140,13 @@
     font-style: normal;
 
 }
+
+/*sawarabi_gothicregular*/
+@font-face {
+    font-family: 'sawarabi_gothicregular';
+    src: url('sawarabigothic-regular-webfont.woff2') format('woff2'),
+         url('sawarabigothic-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

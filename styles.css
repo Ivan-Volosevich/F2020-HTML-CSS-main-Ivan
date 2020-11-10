@@ -34,17 +34,19 @@ body {
 		font-size: 32px;
 		color: #4cb480;
 		text-transform: uppercase;
+		font-family: "sawarabi_gothicregular";
+		padding-top: 5px;
 	}
 
 	.logo > p:after {
 		display: block;
 		content: "";
-		width: 50px;
-		height: 4px;
+		width: 26px;
+		height: 5px;
 		background: #4cb480;
 		position: absolute;
-		bottom: -8px;
-		left: 50%;
+		bottom: -12px;
+		left: 51%;
 		transform: translateX(-50%);
 	}
 /*/logo*/
@@ -53,22 +55,21 @@ body {
 .nav > ul {
     list-style: none;
     text-align: center;
-    padding: 0;
-    margin: 0;
-    padding: 20px 0;
-    
+    padding: 19px 0;
+	line-height: 36px;
+	letter-spacing: 1px;
 }
 
 .nav > ul li{
     margin-bottom: 15px;
 }
 
-
 .nav ul li a {
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: uppercase;
-    text-decoration: none;
+	text-decoration: none;
+	font-weight: bold;
 }
 .nav {
     position: relative;
@@ -81,14 +82,14 @@ body {
     height: 2px;
     background-color: white;
     position: absolute;
-    top: 0;
-    left: 50%;
+    top: 34px;
+    left: 51%;
     transform: translateX(-50%);
 }
 
 .nav::after {
     top: auto;
-    bottom: 0;
+    bottom: -7px;
 }
 /*/nav*/
 
@@ -111,14 +112,15 @@ body {
 
 /*search-icon*/
 .search-icon {
-    padding: 20px 0;
+    padding: 40px 0px;
     text-align: center;
     opacity: 0.5;
 }
 
 .search-icon svg {
     fill: white;
-    width: 35px;
+	width: 28px;
+	height: 28px;
 }
 /*/search-icon*/
 
@@ -129,7 +131,7 @@ body {
 
 .padding-left {
 	text-align: left;
-	padding: 10% 15%;				/*200px 325px;*/
+	padding: 11% 22.6%;				/*200px 325px;*/
 	overflow: auto;
 }
 /*Чтобы такого не происходило, необходимо задать элементу свойство box-sizing в значении border-box (по умолчанию оно в значении content-box):*/
@@ -139,7 +141,8 @@ body {
 .title-content > h1 {
     position: relative;
 	text-transform: uppercase;
-    font-size: 62px;
+    font-size: 61px;
+    letter-spacing: 5px;
 }
 
 .title-content > h3 {
@@ -218,7 +221,7 @@ body {
 
 	.services > p {
 		text-align: center;
-		font-family: Poppins;
+		font-family: "poppins";
 	}
 
 
