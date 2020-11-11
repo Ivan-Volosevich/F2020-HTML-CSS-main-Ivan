@@ -204,7 +204,7 @@ body {
     max-height: 450px;
     max-width: 363px;
     border-radius: 6px;
-    background-color: #808080;			/*#f6f6f6*/
+    background-color: #f6f6f6;			/*#f6f6f6*/
 	margin: 30px;
     position: relative;
     text-align: center;
@@ -306,18 +306,18 @@ body {
 	padding: 6.98% 8.3% 5.98% 8.3%;
 }
 
-.blog-title::before {
+.blog h2:before {
 	background-color: #4cb480;
 	content: "";
 	position: absolute;
 	top: -17px;
-    left: 3px
+    left: 3px;
 	height: 4px;
     width: 60px;
     border-radius: 2px;
 }
 
-.blog-title {
+.blog h2 {
 	position: relative;
 	text-transform: uppercase;
 	font-size: 44px;
@@ -329,7 +329,7 @@ body {
 	justify-content: space-around;
 }
 
-.blog-right {
+.blog__desc {
 	padding: 20px 0px 20px 40px;
 }
 
@@ -403,6 +403,14 @@ body {
 
 /*/footer*/
 
+@media (max-width: 1429px) {
+	
+	.services .item {
+		margin-bottom: 60px;
+		max-height: 500px;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
 
 @media (max-width: 1200px) {
     .services {
