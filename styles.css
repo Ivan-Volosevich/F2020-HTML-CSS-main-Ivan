@@ -204,7 +204,7 @@ body {
     max-height: 450px;
     max-width: 363px;
     border-radius: 6px;
-    background-color: #f6f6f6;			/*#f6f6f6*/
+    background-color: #808080;			/*#f6f6f6*/
 	margin: 30px;
     position: relative;
     text-align: center;
@@ -370,7 +370,6 @@ body {
 .footer {
     display: flex;
 	justify-content: space-between;
-	height: 56.3vh;
 }
 
 .foot-contacts {
@@ -413,7 +412,19 @@ body {
 	
 	.feedback {
 		background-size: 25%; 
+	}
+
+	.blog-item {
+        flex-direction: column;
+	}
+	
 }
+
+@media (max-width: 768px) {
+	.blog img {
+	width: 100%;
+	height: auto;
+	}
 }
 
 @media (max-width: 640px) {
@@ -432,28 +443,54 @@ body {
 	
 	.feedback {
 		background-size: 40%; 
-}
-
-	.blog-item {
-        flex-direction: column;
 	}
-	
+
 	.footer {
 		flex-wrap: wrap-reverse;
 	}
 	
 	.icons-network {
 	padding-top: 20px;
-	padding-left: 20px;
+	padding-left: 38%;
 	align-items: center;
 	letter-spacing: 20px;
-}
+	}
 }
 
 @media (max-width: 480px) {
+	
 	.services {
 		padding: 0px;		
 		margin-top: 60px;
+	}
+	
+	.services .item {
+		margin-bottom: 60px;
+		max-height: 500px;
+		margin-right: 5px;
+		margin-left: 0px;
+	}
+	
+	.blog-content > h3 {
+    margin: 0;
+    }
+
+	.blog-content > p {
+    line-height: 1;
+    margin-left: 0;
+    letter-spacing: 0;
+	}
+	
+	.button-blog {
+    left: 0;
+	}
+	
+	.foot-contacts {
+    padding: 0px 0px;
+	}
+	
+	.icons-network {
+	padding-left: 15%;
 	}
 }
 
