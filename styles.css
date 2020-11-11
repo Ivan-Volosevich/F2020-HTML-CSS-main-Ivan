@@ -190,6 +190,7 @@ body {
 	color: #FFFFFF;
 	font-weight: bold;
 	line-height: 2.8;
+	border: 0;
 }
 
 /*services*/
@@ -257,6 +258,7 @@ body {
 		margin-bottom: 61px;
 		font-size: 18px;
 		font-weight: bold;
+		border: 0;
 	}
 /*/services*/
 
@@ -363,6 +365,7 @@ body {
 	padding: 16.8px 0px;
     margin: 10px 0px;
 	border-radius: 6px;
+	/*object-fit: cover {}*/
 }
 /*/blog*/
 
