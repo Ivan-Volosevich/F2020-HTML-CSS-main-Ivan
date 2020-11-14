@@ -414,6 +414,7 @@ body {
 		margin-right: 10px;
 		margin-left: 10px;
 	}
+}
 
 @media (max-width: 1200px) {
     .services {
@@ -536,5 +537,5 @@ Add the following rule:
 Landscape
 Add the following rule:
 
-    and (orientation : landscape) 
-*/
+	and (orientation : landscape)
+*/ 
