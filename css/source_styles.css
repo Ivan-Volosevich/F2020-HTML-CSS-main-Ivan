@@ -1,0 +1,541 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* background: red; */
+    margin: 0;
+    font-family: "poppins", "Arial", sans-serif;
+}
+
+.aside {
+    width: 150px;
+    height: 100%;
+    background-color: #282d32;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+
+
+.main-content {
+    margin-left: 150px;
+    min-height: 200vh;
+}
+
+/*logo*/
+.logo {
+    text-align: center;
+    position: relative;
+}
+
+	.logo > p {
+		font-size: 32px;
+		color: #4cb480;
+		text-transform: uppercase;
+		font-family: "sawarabi_gothicregular";
+		padding-top: 5px;
+	}
+
+	.logo > p:after {
+		display: block;
+		content: "";
+		width: 26px;
+		height: 5px;
+		background: #4cb480;
+		position: absolute;
+		bottom: -12px;
+		left: 51%;
+		transform: translateX(-50%);
+	}
+/*/logo*/
+
+/*nav*/
+.nav > ul {
+    list-style: none;
+    text-align: center;
+    padding: 19px 0;
+	line-height: 36px;
+	letter-spacing: 1px;
+}
+
+.nav > ul li{
+    margin-bottom: 15px;
+}
+
+.nav ul li a {
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+}
+.nav {
+    position: relative;
+    opacity: 0.5;
+}
+.nav::before, .nav::after {
+    display: block;
+    content: "";
+    width: 90px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 34px;
+    left: 51%;
+    transform: translateX(-50%);
+}
+
+.nav::after {
+    top: auto;
+    bottom: -7px;
+}
+/*/nav*/
+
+/*input toggle*/
+.toggle {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.nav svg {
+    fill: #FFFFFF;
+    width: 30px;
+}
+
+.toggle:checked ~ ul {
+    display:none;
+}
+/*/toggle*/
+
+/*search-icon*/
+.search-icon {
+    padding: 40px 0px;
+    text-align: center;
+    opacity: 0.5;
+}
+
+.search-icon svg {
+    fill: white;
+	width: 28px;
+	height: 28px;
+}
+/*/search-icon*/
+
+.colored-bg {
+	background-color: #353a3f;
+	color: #FFFFFF;
+}
+
+.padding-left {
+	text-align: left;
+	padding: 10.9% 22.5% 13.79% 22.5%;				/*200px 325px;*/
+	overflow: auto;
+}
+/*Чтобы такого не происходило, необходимо задать элементу свойство box-sizing в значении border-box (по умолчанию оно в значении content-box):*/
+
+/*title-content*/
+
+.title-content > h1 {
+    position: relative;
+	text-transform: uppercase;
+    font-size: 62px;
+	letter-spacing: 4px;
+	font-weight: bold;
+	margin-bottom: -7px;
+}
+
+.title-content > h3 {
+    text-transform: uppercase;
+	font-size: 30px;
+	letter-spacing: 1.93px;
+	margin-bottom: 0;
+}
+
+.title-content > p {
+    font-size: 22px;
+	letter-spacing: 0.18px;
+	margin-top: 12px;
+	margin-bottom: 52px;
+	line-height: 1.636;
+}
+
+.title-content h1:before {
+	background-color: #4cb480;
+	content: "";
+	position: absolute;
+	top: -10px;
+	left: -2px;
+	height: 4px;
+    width: 60px;
+    border-radius: 2px;
+}
+
+.button-hover:hover, .services .button-hover:hover {
+	color: #000000;
+	background-color: #20B2AA;
+}
+
+.button-left {
+	position: relative;
+	font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #4cb480;
+	color: #FFFFFF;
+	font-weight: bold;
+	line-height: 2.8;
+	border: 0;
+}
+
+/*services*/
+.services {
+    display: flex;
+    padding: 6.2% 6.3%;		/*120px 90px;*/	
+}
+
+.services > .item {
+    min-height: 360px;
+    min-width: 260px;
+    max-height: 450px;
+    max-width: 363px;
+    border-radius: 6px;
+    background-color: #f6f6f6;			/*#f6f6f6*/
+	margin: 30px;
+    position: relative;
+    text-align: center;
+}
+
+	.services .icon {
+		background: #FFFFFF;
+		border-radius: 50%;
+		width: 110px;
+		height: 110px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: -55px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.services .content {
+		padding: 105px 62px 7px 62px;
+	}
+
+	.services .content > h3 {
+		font-size: 30px;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+		color: #353a3f;
+		margin: -11px;
+		letter-spacing: 1.9px;
+	}
+
+	.services .content > p {
+		font-size: 18px;
+		line-height: 1.667	;
+		margin: 24px 0px;
+		letter-spacing: 0.25px;
+	}
+
+
+	.services .button {
+		text-transform: uppercase;
+		text-align: center;
+		width: 160px;
+		height: 55px;
+		border-radius: 28px;
+		background-color: #4cb480;
+		color: #FFFFFF;
+		margin-bottom: 61px;
+		font-size: 18px;
+		font-weight: bold;
+		border: 0;
+	}
+/*/services*/
+
+/*feedback*/
+.feedback {
+	background-image: url(./Images/Quote/QuoteBig.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 27%;
+	padding-bottom: 5.2564%;
+}
+.feedback img {
+	margin-top: -16px;
+}
+
+.feed-text {
+	font-size: 28px;
+	font-style: italic;
+	line-height: 1.39;
+	margin-top: 14px;
+	letter-spacing: 0.2px;
+}
+
+.feed-author::before {
+    background-color: #8c9198;
+    content: "";
+	position: absolute;
+	top: 27px;
+	left: 0;
+	height: 5px;
+    width: 60px;
+    border-radius: 2px;
+}
+
+.feed-author {
+	font-size: 20px;
+	position: relative;
+    padding: 46px 0px;
+    color: #8c9198;
+    font-family: "poppins medium";
+    letter-spacing: 0.56px;
+}
+/*/feedback*/
+
+/*blog*/
+.blog {
+	padding: 6.98% 8.3% 5.98% 8.3%;
+}
+
+.blog h2:before {
+	background-color: #4cb480;
+	content: "";
+	position: absolute;
+	top: -17px;
+    left: 3px;
+	height: 4px;
+    width: 60px;
+    border-radius: 2px;
+}
+
+.blog h2 {
+	position: relative;
+	text-transform: uppercase;
+	font-size: 44px;
+	letter-spacing: 2.9px;
+}
+
+.blog-item {
+	display: flex;
+	justify-content: space-around;
+}
+
+.blog__desc {
+	padding: 20px 0px 20px 40px;
+}
+
+.blog-content > h3 {
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 32px 39px -6px;
+	letter-spacing: 1.9px;
+}
+
+.blog-content > p {
+	font-size: 18px;
+	line-height: 1.667;
+	margin-left: 39px;
+	letter-spacing: 0.4px;
+}
+
+.button-blog {
+    width: 176px;
+    height: 55px;
+	border-radius: 28px;
+	font-size: 18px;
+	top: 12px;
+    left: 39px;
+}
+
+.blog img {
+	min-width: 180px;
+	position: relative;
+	padding: 16.8px 0px;
+    margin: 10px 0px;
+	border-radius: 6px;
+	/*object-fit: cover {}*/
+}
+/*/blog*/
+
+/*footer*/
+.footer {
+    display: flex;
+	justify-content: space-between;
+}
+
+.foot-contacts {
+	padding: 72px 100px;
+}
+
+	.nav-foot > a{
+		font-size: 18px;
+		font-weight: bold;
+		text-decoration: none;
+		color: #FFFFFF;
+		opacity: 0.5;
+		text-transform: uppercase;
+		margin: 0px 20px;
+		letter-spacing: 2px;
+	}
+
+	.foot-contacts > p {
+		font-size: 16px;
+		line-height: 1.875;
+		opacity: 0.3;
+		margin-left: 20px;
+		letter-spacing: 0.3px;
+		}
+
+.icons-network {
+	padding-right: 121px;
+	padding-top: 91px;
+	letter-spacing: 27px;
+}
+
+/*/footer*/
+
+@media (max-width: 1429px) {
+	
+	.services .item {
+		margin-bottom: 60px;
+		max-height: 500px;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+}
+
+@media (max-width: 1200px) {
+    .services {
+        flex-direction: column;
+		justify-content: space-between;
+    }
+	
+	.feedback {
+		background-size: 25%; 
+	}
+
+	.blog-item {
+        flex-direction: column;
+	}
+	
+}
+
+@media (max-width: 768px) {
+	.blog img {
+	width: 100%;
+	height: auto;
+	}
+}
+
+@media (max-width: 640px) {
+    .aside {
+        width: 100%;
+        height: auto;
+        background-color: #282d32;
+        position: relative;
+        padding: 10px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+	
+	.feedback {
+		background-size: 40%; 
+	}
+
+	.footer {
+		flex-wrap: wrap-reverse;
+	}
+	
+	.icons-network {
+	padding-top: 20px;
+	padding-left: 38%;
+	align-items: center;
+	letter-spacing: 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	
+	.services {
+		padding: 0px;		
+		margin-top: 60px;
+	}
+	
+	.services .item {
+		margin-bottom: 60px;
+		max-height: 500px;
+		margin-right: 5px;
+		margin-left: 0px;
+	}
+	
+	.blog-content > h3 {
+    margin: 0;
+    }
+
+	.blog-content > p {
+    line-height: 1;
+    margin-left: 0;
+    letter-spacing: 0;
+	}
+	
+	.button-blog {
+    left: 0;
+	}
+	
+	.foot-contacts {
+    padding: 0px 0px;
+	}
+	
+	.icons-network {
+	padding-left: 15%;
+	}
+}
+
+/*
+iPhone X
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { }
+
+iPhone 8
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 667px) 
+    and (-webkit-device-pixel-ratio : 2) { }
+
+iPhone 8 Plus
+@media only screen 
+    and (device-width : 414px) 
+    and (device-height : 736px) 
+    and (-webkit-device-pixel-ratio : 3) { }
+
+iPhone 6+/6s+/7+/8+ share the same sizes, while the iPhone 7/8 also do.
+
+Looking for a specific orientation ?
+
+Portrait
+Add the following rule:
+
+    and (orientation : portrait) 
+	
+Landscape
+Add the following rule:
+
+	and (orientation : landscape)
+*/ 
