@@ -1,11 +1,23 @@
 {
-    "name": "webpack-test",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "",
-    "license": "ISC"
+  "name": "webpack-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.29.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RainlandV/F2020-HTML-CSS-main-Ivan.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RainlandV/F2020-HTML-CSS-main-Ivan/issues"
+  },
+  "homepage": "https://github.com/RainlandV/F2020-HTML-CSS-main-Ivan#readme",
+  "description": ""
 }
