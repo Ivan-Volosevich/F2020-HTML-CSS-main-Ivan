@@ -89,7 +89,7 @@ body {
 
 .nav::after {
     top: auto;
-    bottom: -7px;
+    bottom: -41px;
 }
 /*/nav*/
 
@@ -115,7 +115,7 @@ body {
 
 /*search-icon*/
 .search-icon {
-    padding: 40px 0px;
+    margin: 90px 0px;
     text-align: center;
     opacity: 0.5;
 }
@@ -158,10 +158,10 @@ body {
 }
 
 .title-content > p {
-    font-size: 22px;
-	letter-spacing: 0.18px;
+    font-size: 18px;
+	letter-spacing: 0.3px;
 	margin-top: 12px;
-	margin-bottom: 52px;
+	margin-bottom: 54px;
 	line-height: 1.636;
 }
 
