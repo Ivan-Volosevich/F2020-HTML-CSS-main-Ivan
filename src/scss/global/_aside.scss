@@ -1,3 +1,4 @@
+// aside
 .aside {
     width: 150px;
     height: 100%;
@@ -6,7 +7,6 @@
     top: 0;
     left: 0;
     padding: 10px;
-
     @media (max-width: 640px) {
             width: 100%;
             height: auto;
@@ -15,3 +15,100 @@
             padding: 10px;
         }
 }
+// /aside
+
+// logo
+.logo {
+    text-align: center;
+    position: relative;
+	>p {
+		font-size: 32px;
+		color: #4cb480;
+		text-transform: uppercase;
+		font-family: "sawarabi_gothicregular";
+		padding-top: 5px;
+	}
+	>p:after {
+		display: block;
+		content: "";
+		width: 26px;
+		height: 5px;
+		background: #4cb480;
+		position: absolute;
+		bottom: -12px;
+		left: 51%;
+		transform: translateX(-50%);
+    }
+}
+// /logo
+
+// nav
+.nav {
+    position: relative;
+    opacity: 0.5;
+    >ul {
+        list-style: none;
+        text-align: center;
+        padding: 0px;
+        line-height: 36px;
+        letter-spacing: 1px;
+}
+    >ul li{
+        margin-bottom: 15px;
+}
+    ul li a {
+        color: white;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bold;
+}
+    ::before, ::after {
+        display: block;
+    content: "";
+        width: 90px;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        top: 34px;
+        left: 51%;
+        transform: translateX(-50%);
+}
+    ::after {
+            top: auto;
+            bottom: -41px;
+    }
+}
+// /nav
+
+// input toggle
+.toggle {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    :checked ~ ul {
+            display:none;
+    }
+}
+
+.nav svg {
+    fill: #FFFFFF;
+	width: 30px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+// /toggle
+
+// search-icon
+.search-icon {
+    margin: 90px 0px;
+    text-align: center;
+    opacity: 0.5;
+    svg {
+        fill: white;
+        width: 28px;
+        height: 28px;
+    }
+}
+// /search-icon

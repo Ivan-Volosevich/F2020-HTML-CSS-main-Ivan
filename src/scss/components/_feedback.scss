@@ -1,0 +1,44 @@
+// feedback
+.feedback {
+	background-image: url(./Images/Quote/QuoteBig.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 27%;
+	padding-bottom: 5.2564%;
+    img {
+	    margin-top: -16px;
+    }
+    @media (max-width: 1200px) {
+        background-size: 25%; 
+    }
+    @media (max-width: 640px) {
+        background-size: 40%; 
+}
+
+.feed-text {
+	font-size: 28px;
+	font-style: italic;
+	line-height: 1.39;
+	margin-top: 14px;
+	letter-spacing: 0.2px;
+}
+
+.feed-author {
+	font-size: 20px;
+	position: relative;
+    padding: 46px 0px;
+    color: #8c9198;
+    font-family: "poppins medium";
+    letter-spacing: 0.56px;
+    ::before {
+        background-color: #8c9198;
+        content: "";
+        position: absolute;
+        top: 27px;
+        left: 0;
+        height: 5px;
+        width: 60px;
+        border-radius: 2px;
+    }
+}
+}

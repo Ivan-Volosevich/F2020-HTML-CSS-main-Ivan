@@ -1,0 +1,27 @@
+%colored-background {
+	background-color: #353a3f;
+	color: #FFF;
+}
+
+.main-content {
+    margin-left: 150px;
+    min-height: 200vh;
+}
+
+.colored-bg {
+	@extend %colored-background;
+}
+
+.padding-left {
+	text-align: left;
+	padding: 10.9% 22.5% 13.79% 22.5%;				/*200px 325px;*/
+	overflow: auto;
+}
+/*Чтобы такого не происходило, необходимо задать элементу свойство box-sizing в значении border-box (по умолчанию оно в значении content-box):*/
+
+@media (max-width: 640px) {
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+	}
+}
