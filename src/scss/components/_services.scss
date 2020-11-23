@@ -1,7 +1,8 @@
 /*services*/
 .services {
     display: flex;
-    padding: 6.2% 6.3%;		/*120px 90px;*/	
+	padding: 6.2% 6.3%;		/*120px 90px;*/	
+	justify-content: space-around;
     > .item {
         min-height: 360px;
         min-width: 260px;

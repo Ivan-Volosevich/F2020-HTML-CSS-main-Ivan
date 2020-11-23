@@ -8,12 +8,14 @@
     left: 0;
     padding: 10px;
     @media (max-width: 640px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             width: 100%;
-            height: auto;
-            background-color: #282d32;
             position: relative;
-            padding: 10px;
-        }
+            padding: 10px 20px;
+            height: 70px;
+    }
 }
 // /aside
 
@@ -39,6 +41,14 @@
 		left: 51%;
 		transform: translateX(-50%);
     }
+    @media (max-width: 640px) {
+        >p:after {
+            bottom: 25px;
+        }
+        >p {
+            padding: 0;
+        }
+    }
 }
 // /logo
 
@@ -46,26 +56,35 @@
 .nav {
     position: relative;
     opacity: 0.5;
-    >ul {
+    ul {
         list-style: none;
         text-align: center;
         padding: 0px;
         line-height: 36px;
         letter-spacing: 1px;
-}
-    >ul li{
-        margin-bottom: 15px;
-}
-    ul li a {
-        color: white;
-        font-size: 16px;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-weight: bold;
-}
+        @media (max-width: 640px) {
+                position: absolute;
+                background-color: #282d32;
+                width: 100%;
+                left: 0;
+        }
+        li{
+            margin-bottom: 15px;
+            a {
+                color: white;
+                font-size: 16px;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-weight: bold;
+                @media (max-width: 640px) {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
     ::before, ::after {
         display: block;
-    content: "";
+        content: "";
         width: 90px;
         height: 2px;
         background-color: white;
@@ -73,12 +92,33 @@
         top: 34px;
         left: 51%;
         transform: translateX(-50%);
-}
+        @media (max-width: 640px) {
+            display: none;
+        }
+    }
     ::after {
             top: auto;
             bottom: -41px;
     }
+    @media (max-width: 640px) {
+        position: static;
+        order: 3;
+        opacity: 1;
+    }
+    svg {
+        fill: #FFF;
+        width: 30px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        @media (max-width: 640px) {
+            display: inline-block;
+            opacity: 0.5;
+        }
+    }
 }
+
+
 // /nav
 
 // input toggle
@@ -86,17 +126,15 @@
     width: 0;
     height: 0;
     visibility: hidden;
-    :checked~ul {
-            display:none;
+    &:checked~ul {
+            transform: translateY(0);
     }
-}
-
-.nav svg {
-    fill: #FFFFFF;
-	width: 30px;
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
+    & ~ ul {
+    @media (max-width: 640px) {
+            transition: transform 0.5s;
+            transform: translateY(-120%);
+        }
+    }
 }
 // /toggle
 
@@ -109,6 +147,9 @@
         fill: white;
         width: 28px;
         height: 28px;
+    }
+    @media (max-width: 640px) {
+    padding: 10px 0;
     }
 }
 // /search-icon
