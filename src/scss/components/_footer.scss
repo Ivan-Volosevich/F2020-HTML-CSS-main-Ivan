@@ -15,16 +15,16 @@
 		}
 }
 
-	.nav-foot > a{
-		font-size: 18px;
-		font-weight: bold;
-		text-decoration: none;
-		color: #FFFFFF;
-		opacity: 0.5;
-		text-transform: uppercase;
-		margin: 0px 20px;
-		letter-spacing: 2px;
-	}
+.nav-foot > a{
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #FFFFFF;
+	opacity: 0.5;
+	text-transform: uppercase;
+	margin: 0px 20px;
+	letter-spacing: 2px;
+}
 
 .icons-network {
 	padding-right: 121px;
@@ -34,25 +34,43 @@
 
 /*/footer*/
 
-@media (max-width: 640px) {
-    .footer {
-		flex-wrap: wrap-reverse;
-	}
-	
+@media (max-width: 1024px) {
+	.foot-contacts {
+		padding: 0;
+		margin: 91px 0px;
+		}
 	.icons-network {
-	padding-top: 20px;
-	padding-left: 38%;
-	align-items: center;
-	letter-spacing: 20px;
+		padding: 0;
+		margin: 91px 50px;
+	}
+}
+
+@media (max-width: 768px) {
+    .footer {
+		flex-wrap: wrap;
+	}
+	.foot-contacts {
+		margin: 0;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px;
+	}
+	.icons-network {
+		margin: 0;
+		letter-spacing: 100px;
+		margin-left: auto;
+		margin-right: auto;	
 	}
 }
 
 @media (max-width: 480px) {
-	.foot-contacts {
-    padding: 0px 0px;
+	.nav-foot {
+		margin: 0 40vh 0 0;
 	}
-	
-	.icons-network {
-	padding-left: 15%;
+}
+
+@media (max-width: 368px) {
+	.nav-foot {
+		margin: 0 25vh 0 0;
 	}
 }

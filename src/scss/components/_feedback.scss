@@ -1,6 +1,6 @@
 // feedback
 .feedback {
-	background-image: url(./Images/Quote/QuoteBig.png);
+	background-image: url(./../Images/Quote/QuoteBig.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 27%;
@@ -13,6 +13,7 @@
     }
     @media (max-width: 640px) {
         background-size: 40%; 
+    }
 }
 
 .feed-text {
@@ -40,5 +41,4 @@
         width: 60px;
         border-radius: 2px;
     }
-}
 }

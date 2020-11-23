@@ -266,6 +266,16 @@
     height: 12.875px;
     z-index: 92;
   }
+
+  .bg {
+    background-color: rgb(76, 180, 128);
+    position: absolute;
+    left: 915px;
+    top: 2626px;
+    width: 176px;
+    height: 55px;
+    z-index: 91;
+  }  
   /*/BLOG*/
 
   /*FOOTER*/

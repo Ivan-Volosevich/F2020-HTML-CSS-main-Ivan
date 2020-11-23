@@ -1,71 +1,75 @@
 /*blog*/
 .blog {
 	padding: 6.98% 8.3% 5.98% 8.3%;
-}
-
-.blog h2:before {
-	background-color: #4cb480;
-	content: "";
-	position: absolute;
-	top: -17px;
-    left: 3px;
-	height: 4px;
-    width: 60px;
-    border-radius: 2px;
-}
-
-.blog h2 {
-	position: relative;
-	text-transform: uppercase;
-	font-size: 44px;
-	letter-spacing: 2.9px;
+	h2:before {
+		background-color: #4cb480;
+		content: "";
+		position: absolute;
+		top: -17px;
+		left: 3px;
+		height: 4px;
+		width: 60px;
+		border-radius: 2px;
+	}
+	h2 {
+		position: relative;
+		text-transform: uppercase;
+		font-size: 44px;
+		letter-spacing: 2.9px;
+	}
 }
 
 .blog-item {
 	display: flex;
 	justify-content: space-around;
+	img {
+		min-width: 180px;
+		position: relative;
+		padding: 16.8px 0px;
+		margin: 10px 0px;
+		border-radius: 6px;
+		/*object-fit: cover {}*/
+		// flex-basis: 565px;
+		// flex-shrink: 0;
+		// display: block;
+		// object-fit: cover;
+		// height: 360px;
+		// width: 100%;
+	}
 }
 
 .blog__desc {
 	padding: 20px 0px 20px 40px;
 }
 
-.blog-content > h3 {
-	font-size: 30px;
-	font-weight: bold;
-	text-transform: uppercase;
-	margin: 32px 39px -6px;
-	letter-spacing: 1.9px;
+.blog-content{
+	>h3 {
+		font-size: 30px;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin: 32px 39px -6px;
+		letter-spacing: 1.9px;
+	}
+	> p {
+		font-size: 18px;
+		line-height: 1.667;
+		margin-left: 39px;
+		letter-spacing: 0.4px;
+	}
 }
 
-.blog-content > p {
-	font-size: 18px;
-	line-height: 1.667;
-	margin-left: 39px;
-	letter-spacing: 0.4px;
-}
-
-.button-blog {
-    width: 176px;
-    height: 55px;
-	border-radius: 28px;
-	font-size: 18px;
-	top: 12px;
-    left: 39px;
-}
-
-.blog img {
-	min-width: 180px;
-	position: relative;
-	padding: 16.8px 0px;
-    margin: 10px 0px;
-	border-radius: 6px;
-	/*object-fit: cover {}*/
-}
 /*/blog*/
 
+@media (max-width: 1366px) {
+	.blog-content {
+		>h3 {
+			margin: 5px 39px -6px;
+		}
+	}
+}
+
 @media (max-width: 1200px) {
-    	.blog-item {
+    .blog-item {
         flex-direction: column;
 	}
 }
@@ -78,16 +82,16 @@
 }
 
 @media (max-width: 480px) {
-	.blog-content > h3 {
-    margin: 0;
-    }
-
-	.blog-content > p {
-    line-height: 1;
-    margin-left: 0;
-    letter-spacing: 0;
+	.blog-content{
+		>h3 {
+			margin: 0;
+		}
+		>p {
+			line-height: 1;
+			margin-left: 0;
+			letter-spacing: 0;
+			}
 	}
-	
 	.button-blog {
     left: 0;
 	}
