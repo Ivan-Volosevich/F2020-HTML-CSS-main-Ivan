@@ -56,17 +56,24 @@
 .nav {
     position: relative;
     opacity: 0.5;
+    @media (max-width: 640px) {
+        position: static;
+        order: 3;
+        opacity: 1;
+    }
     ul {
         list-style: none;
         text-align: center;
         padding: 0px;
         line-height: 36px;
         letter-spacing: 1px;
+        margin-top: 41px;
         @media (max-width: 640px) {
                 position: absolute;
                 background-color: #282d32;
                 width: 100%;
                 left: 0;
+                z-index: 1;
         }
         li{
             margin-bottom: 15px;
@@ -100,11 +107,6 @@
             top: auto;
             bottom: -41px;
     }
-    @media (max-width: 640px) {
-        position: static;
-        order: 3;
-        opacity: 1;
-    }
     svg {
         fill: #FFF;
         width: 30px;
@@ -126,14 +128,25 @@
     width: 0;
     height: 0;
     visibility: hidden;
+    display: none;
     &:checked~ul {
-            transform: translateY(0);
+        display: block;
+        @media (max-width: 640px) {
+            transform: translateY(-10%);  
+        }
     }
     & ~ ul {
-    @media (max-width: 640px) {
+        @media (max-width: 640px) { 
             transition: transform 0.5s;
-            transform: translateY(-120%);
+            transform: translateY(-140%);
         }
+    }
+}
+.toggle-icon {
+    cursor: pointer;
+    visibility: hidden;
+    @media (max-width: 640px) {
+        visibility: visible;
     }
 }
 // /toggle
