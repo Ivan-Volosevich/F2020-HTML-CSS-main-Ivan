@@ -1,7 +1,18 @@
 // buttons
+@keyframes funny-btn {
+	0% {background-color: #353a3f;}
+	25% {background-color: #4cb480;}
+	50% {background-color: #4cb480;}
+	100% {background-color: #353a3f;}
+}
+
+.button-hover {
+	animation-name: funny-btn;
+	animation: funny-btn 8s infinite linear;
+}
+
 .button-hover:hover, .services .button-hover:hover {
-	background-color: #4cb46b;
-	border: 1px solid #000;
+	border: 3px solid rgb(124, 124, 124);
 }
 
 .button-left {

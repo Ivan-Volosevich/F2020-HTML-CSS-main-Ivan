@@ -1,6 +1,9 @@
 /*blog*/
 .blog {
-	padding: 6.98% 8.3% 5.98% 8.3%;
+	padding: 5%;
+	@media (max-width: 1600px) {
+		padding: 6.98% 8.3% 5.98% 8.3%;
+	}
 	h2:before {
 		background-color: #4cb480;
 		content: "";
@@ -21,7 +24,7 @@
 
 .blog-item {
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-start;
 	img {
 		min-width: 180px;
 		position: relative;
@@ -43,6 +46,7 @@
 }
 
 .blog-content{
+	max-width: 800px;
 	>h3 {
 		font-size: 30px;
 		font-weight: bold;
