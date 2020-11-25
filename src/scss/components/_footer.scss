@@ -15,15 +15,23 @@
 		}
 }
 
-.nav-foot > a{
-	font-size: 18px;
-	font-weight: bold;
-	text-decoration: none;
-	color: #FFFFFF;
-	opacity: 0.5;
-	text-transform: uppercase;
-	margin: 0px 20px;
-	letter-spacing: 2px;
+.nav-foot{
+	>a {
+		font-size: 18px;
+		font-weight: bold;
+		text-decoration: none;
+		color: #FFFFFF;
+		opacity: 0.5;
+		text-transform: uppercase;
+		margin: 0px 20px;
+		letter-spacing: 2px;
+	}
+	@media (max-width: 480px) {
+			margin: 0 48% 0 0;
+	}
+	@media (max-width: 368px) {
+			margin: 0 19vh 0 0;
+	}
 }
 
 .icons-network {
@@ -31,7 +39,6 @@
 	padding-top: 91px;
 	letter-spacing: 27px;
 }
-
 /*/footer*/
 
 @media (max-width: 1024px) {
@@ -61,17 +68,5 @@
 		letter-spacing: 100px;
 		margin-left: auto;
 		margin-right: auto;	
-	}
-}
-
-@media (max-width: 480px) {
-	.nav-foot {
-		margin: 0 40vh 0 0;
-	}
-}
-
-@media (max-width: 368px) {
-	.nav-foot {
-		margin: 0 25vh 0 0;
 	}
 }
