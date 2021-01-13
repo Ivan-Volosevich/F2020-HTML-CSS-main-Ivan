@@ -13,7 +13,7 @@ client.connect(err => {
     } else {
       console.log('connected');
       client.query(`INSERT INTO Persons (lastname, firstname)
-                    VALUES ('john', 'Doe');`;                                // "*" - означает ALL
+                    VALUES ('john', 'Doe');`           //ОШИБКА                     // "*" - означает ALL
                     (err, res) => {
                         if (err) {
                              console.log(err)
