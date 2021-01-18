@@ -1,0 +1,154 @@
+extends layout
+    
+block content
+  ul
+    each user in users
+      li= user.firstname
+
+
+
+//- head
+//-   meta(charset='UTF-8')
+//-   meta(name='viewport' content='width=device-width, initial-scale=1.0')
+//-   title Document
+//-   link(rel='stylesheet' href='./Fonts/Fonts.css')
+//-   link(rel='stylesheet' href='./css/main.css')
+//- .wrapper
+//-   .aside
+//-     .logo
+//-       p SDS
+//-     nav.nav
+//-       label.toggle-icon(for='toggle-button')
+//-         svg#light(enable-background='new 0 0 24 24' height='30' viewbox='0 0 24 24' width='30' xmlns='http://www.w3.org/2000/svg')
+//-           g
+//-             path(d='m21.5 24h-19c-1.379 0-2.5-1.122-2.5-2.5v-19c0-1.378 1.121-2.5 2.5-2.5h19c1.379 0 2.5 1.122 2.5 2.5v19c0 1.378-1.121 2.5-2.5 2.5zm-19-23c-.827 0-1.5.673-1.5 1.5v19c0 .827.673 1.5 1.5 1.5h19c.827 0 1.5-.673 1.5-1.5v-19c0-.827-.673-1.5-1.5-1.5z')
+//-           g
+//-             path(d='m16.5 8h-9c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h9c.276 0 .5.224.5.5s-.224.5-.5.5z')
+//-           g
+//-             path(d='m16.5 12.5h-9c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h9c.276 0 .5.224.5.5s-.224.5-.5.5z')
+//-           g
+//-             path(d='m16.5 17h-9c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h9c.276 0 .5.224.5.5s-.224.5-.5.5z')
+//-       input#toggle-button.toggle(type='checkbox')
+//-       ul
+//-         li
+//-           a(href='#') Work
+//-         li
+//-           a(href='#') About
+//-         li
+//-           a(href='#services') Services
+//-         li
+//-           a(href='#blog') Blog
+//-         li
+//-           a(href='#contact') Contact
+//-     .serch
+//-       .search-icon
+//-         svg.svg.svg-button(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 512 512')
+//-           path(d='M505.7 475.6l-145.6-145.6c28.2-34.8 45.2-79.1 45.2-127.3 0-111.7-90.9-202.7-202.7-202.7S0 90.9 0 202.7s90.9 202.7 202.7 202.7c48.2 0 92.5-17 127.3-45.2l145.6 145.6c4.2 4.2 9.6 6.3 15.1 6.3s10.9-2.1 15.1-6.3C514.1 497.4 514.1 483.9 505.7 475.6zM202.7 362.7c-88.2 0-160-71.8-160-160s71.8-160 160-160 160 71.8 160 160S290.9 362.7 202.7 362.7z')
+//-         input.search-input.hide(type='text')
+//-   .main-content
+//-     //- title
+//-     section.title.colored-bg.padding-left
+//-       .title-content.items-wrap
+//-         h1 title of the page
+//-         h3 subtitle
+//-         p
+//-           | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra turpis tristique nisi laoreet gravida. Sed sed orci ut ante pellentesque efficitur id ac erat. Morbi metus metus, dictum sed arcu at, interdum porttitor erat.
+//-       .actions
+//-         button.button-left.button-hover BUTTON
+//-     //- services
+//-     section.services
+//-       a(name='services')
+//-       .item
+//-         .icon
+//-           img(src='./images/icons/icon-image.png')
+//-         .content
+//-           h3 Photos
+//-           p
+//-             | Vestibulum suscipit tortor magna, quis pellentesque arcu volutpat ac. Tempus leo erat, sit amet ullamcorper nisl.
+//-         .actions
+//-           button.button.button-hover button
+//-       .item
+//-         .icon
+//-           img(src='./images/icons/icon-film.png')
+//-         .content
+//-           h3 Videos
+//-           p
+//-             | Vestibulum suscipit tortor magna, quis pellentesque arcu volutpat ac. Tempus leo erat, sit amet ullamcorper nisl.
+//-         .actions
+//-           button.button.button-hover button
+//-       .item
+//-         .icon
+//-           img(src='./images/icons/icon-download.png')
+//-         .content
+//-           h3 Downloads
+//-           p
+//-             | Vestibulum suscipit tortor magna, quis pellentesque arcu volutpat ac. Tempus leo erat, sit amet ullamcorper nisl.
+//-         .actions
+//-           button.button.button-hover button
+//-     //- feedback
+//-     section.feedback.colored-bg.padding-left
+//-       .quote
+//-         img(src='./Images/Quote/quote  lil.png')
+//-       .feed-cont.items-wrap
+//-         p.feed-text
+//-           | In hac habitasse platea dictumst. Phasellus finibus ipsum enim, non pretium massa mattis non. Curabitur ut tempus ex. Nunc dictum est enim, consectetur convallis odio mollis tempus!
+//-         p.feed-author Jim Gordon (GCPD)
+//-     //- blog
+//-     section.blog
+//-       a(name='blog')
+//-       div
+//-         h2.blog-title from the blog
+//-       .blog-item
+//-         .blog__img
+//-           div
+//-             img(src='./Images/Blog image.jpg' width='565' height='363' alt='Image')
+//-         .blog__desc
+//-           .blog-content
+//-             h3 Title of a post
+//-             p
+//-               | In hac habitasse platea dictumst. Phasellus finibus ipsum enim, non pretium massa mattis non. Curabitur ut tempus ex. Nunc dictum est enim, consectetur convallis odio mollis tempus.
+//-             .actions
+//-               button.button-blog.button-hover.button-blog Read more
+//-       .blog-item
+//-         .blog__img
+//-           div
+//-             img(src='./Images/Blog image.jpg' width='565' height='363' alt='Image')
+//-         .blog__desc
+//-           .blog-content
+//-             h3 Title of a post
+//-             p
+//-               | In hac habitasse platea dictumst. Phasellus finibus ipsum enim, non pretium massa mattis non. Curabitur ut tempus ex. Nunc dictum est enim, consectetur convallis odio mollis tempus.
+//-             .actions
+//-               button.button-blog.button-hover Read more
+//-       .blog-item
+//-         .blog__img
+//-           div
+//-             img(src='./Images/Blog image.jpg' width='565' height='363' alt='Image')
+//-         .blog__desc
+//-           .blog-content
+//-             h3 Title of a post
+//-             p
+//-               | In hac habitasse platea dictumst. Phasellus finibus ipsum enim, non pretium massa mattis non. Curabitur ut tempus ex. Nunc dictum est enim, consectetur convallis odio mollis tempus.
+//-             .actions
+//-               button.button-blog.button-hover.button-blog Read more
+//-     //- footer
+//-     footer.footer.colored-bg
+//-       .foot-contacts
+//-         a(name='contact')
+//-         nav.nav-foot
+//-           a(href='#') Work
+//-           a(href='#') About
+//-           a(href='#services') Services
+//-           a(href='#blog') Blog
+//-           a(href='#contact') Contact
+//-         p
+//-           //- &#169;
+//-           | (c) 2018 NAME. All rights reserved.
+//-       .icons-network
+//-         a(href='https://www.facebook.com/')
+//-           img(src='./Images/Networks/facebook.png')
+//-         a(href='https://twitter.com/')
+//-           img(src='./Images/Networks/twitter.png')
+//-         a(href='https://www.instagram.com/')
+//-           img(src='./Images/Networks/instagram.png')
+//- script(src='./scripts.js')

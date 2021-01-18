@@ -1,3 +1,16 @@
+// ПРОГНОЗ ПОГОДЫ
+const weather1 = [
+    {
+        "name": "Minsk",
+        "country": "Belarus",
+        
+    },
+];
+
+
+
+
+
 //                         // document.addEventListener('DOMContentLoaded', function(){
 //                         // });
 

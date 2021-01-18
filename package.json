@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "npx sass --watch  src/scss/main.scss css/main.css"
+    "dev": "npx gulp watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.5.3",
-    "pg": "^8.5.1"
+    "pg": "^8.5.1",
+    "pug": "^3.0.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.13",
