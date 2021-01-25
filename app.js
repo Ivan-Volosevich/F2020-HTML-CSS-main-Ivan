@@ -2,6 +2,7 @@ const express = require('express'); // ЗАПУСК: "node app"
 const app = express();
 const { Client } = require('pg');
 const bodyParser = require('body-parser');
+const { get } = require('browser-sync');
 
 
 const client = new Client({
@@ -26,7 +27,7 @@ client.connect(err => {
     //                 }
     //     )
     }
-})
+});
 
 app.set('view engine', 'pug');
 
@@ -56,17 +57,35 @@ app.get('/adduser', function(req, res) {
 });
 
 app.post('/createUser', function(req, res) {
+    if (req.body.firstname.length < 1 || req.body.lastname.length < 1) {        // пустая строка - это False = !****
+        return res.status(400).send({error: 'Firstname or Lastname is empty'});
+    };
     client.query(`INSERT
                   INTO Persons (firstname, lastname)
-                  VALUES ('${req.body.firstname}', '${req.body.lastname}')`), (err, result) => {
+                  VALUES ('${req.body.firstname}', '${req.body.lastname}')`, (err, result) => {
                       if (err) {
                           res.status(500).json({ error: err.stack})
                       } else {
                           res.status(200).json({ response: result})
                       }
-                  }
+    });
 });
 
 app.listen(3000, function() {
     console.log('success');
 });
+
+
+app.get('/login', function(req, res) {
+    res.render('login');
+});
+
+app.post('/login', function(req, res) {
+    //uuid4;
+    //res.cookies();
+    //...;
+    //res.redirect('./admin);
+});
+
+//генерация token в node.js: uuid4 - через базу данных берём #id пользователя и set'аем tokes на требуемый #id
+//lifeTime - удаление старого token

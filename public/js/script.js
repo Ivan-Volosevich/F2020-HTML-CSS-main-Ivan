@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const form = document.querySelector('#form'); //поиск с помощью якоря # из *.pug
     const btn = document.querySelector('.btn'); //поиск с помощью класса из *.pug
+    const statusContainer = document.querySelector('.status'); //либо getElementsByClassName('status'); - но для массива
 
 
     btn.addEventListener('click', function(e) {
@@ -18,21 +19,32 @@ document.addEventListener('DOMContentLoaded', function() {
         fetch('/createUser', {
             method: 'POST',
             headers: {
-                'content-type': 'application/json;charset=utf-8'
+                'Content-Type': 'application/json;charset=utf-8'
             },
             body: JSON.stringify(data)
         }).then((response) => {
-            return response.json();
+            statusContainer.innerHTML = '';
+            return Promise.all([response.ok, response.json()]);
         })
         .then((data) => {
             console.log(data);
-            form.insertAdjacentHTML('beforeend', `<p class="alert alert-success">Inserted</p>`);         //!!!ОШИБКА!!!: НЕ ВЫВОДИТ
+            if (!data[0]) {
+                throw Error(data[1].error);
+            }
+            statusContainer.insertAdjacentHTML('beforeend', `<p class="alert alert-success">Inserted</p>`);
+            setTimeout(() => {
+                statusContainer.innerHTML = '';
+            }, 3000);
+        }).catch((error) => {
+            console.log(error);
+            statusContainer.insertAdjacentHTML('beforeend', `<p class="alert alert-danger">${error}</p>`);
+            setTimeout(() => {
+                statusContainer.innerHTML = '';
+            }, 3000);
         })
     });
 
 
     
 
-    // fetch('/ololo') //с помощью get или post app.*** добавить
-
-})
+});
