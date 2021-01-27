@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.querySelector('#login-form');
     const loginButton = document.querySelector('#login-btn');
 
-
+    if (form) {
     btn.addEventListener('click', function(e) {
         e.preventDefault();
         let data = {};
@@ -46,10 +46,27 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 3000);
         })
     });
+    }
 
     loginButton.addEventListener('click', (e) => {
         e.preventDefault();
-        
+        let data = {};
+        const elements = [...loginForm.elements];
+        for (let el of elements) {              // библиотека axios
+            if (el.type !== 'submit') {
+                data[el.name] = el.value;
+            }
+        }
+        fetch('/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(data)
+        })
+        .then((res) => res.json())
+        .then((res) => console.log(res));
+
     });
 
     

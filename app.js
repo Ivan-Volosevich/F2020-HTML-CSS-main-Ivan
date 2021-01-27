@@ -81,6 +81,7 @@ app.get('/login', function(req, res) {
 });
 
 app.post('/login', function(req, res) {
+    res.send(Object.assign(req.body, {server: 'express'}));
     //uuid4;
     //res.cookies();
     //...;
