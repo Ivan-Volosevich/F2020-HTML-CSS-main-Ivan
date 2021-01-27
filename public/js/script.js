@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const btn = document.querySelector('.btn'); //поиск с помощью класса из *.pug
     const statusContainer = document.querySelector('.status'); //либо getElementsByClassName('status'); - но для массива
 
+    const loginForm = document.querySelector('#login-form');
+    const loginButton = document.querySelector('#login-btn');
+
 
     btn.addEventListener('click', function(e) {
         e.preventDefault();
@@ -44,6 +47,10 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     });
 
+    loginButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+    });
 
     
 
