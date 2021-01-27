@@ -81,7 +81,18 @@ app.get('/login', function(req, res) {
 });
 
 app.post('/login', function(req, res) {
-    res.send(Object.assign(req.body, {server: 'express'}));
+
+    client.query(`SELECT * FROM Users`,
+     function(err, response) {
+        if (err) {
+            res.send('Error!');
+        } else {
+            res.send(JSON.stringify(response));
+        }
+    })
+
+    // res.send(Object.assign(req.body, {server: 'express'}));      //временно комментируем
+
     //uuid4;
     //res.cookies();
     //...;
