@@ -101,3 +101,5 @@ app.post('/login', function(req, res) {
 
 //генерация token в node.js: uuid4 - через базу данных берём #id пользователя и set'аем tokes на требуемый #id
 //lifeTime - удаление старого token
+
+    //pg-admin - помощник в создании БД SQL
