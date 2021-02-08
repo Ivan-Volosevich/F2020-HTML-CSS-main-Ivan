@@ -29,9 +29,9 @@ client.connect(err => {
     }
 });
 
-app.set('view engine', 'pug');
+app.set('view engine', 'pug');                      // генерация html-сервера
 
-app.use(express.static(__dirname + '/public'));         //функции промежуточной обработки | middle where
+app.use(express.static(__dirname + '/public'));         // функции промежуточной обработки | middle where
 app.use(bodyParser.json());                             // { extended: true }
 
 app.get('/', function(req, res) {     // require - запрос; response - ответ
