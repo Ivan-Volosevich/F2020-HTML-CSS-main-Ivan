@@ -3,6 +3,9 @@ const sass = require('gulp-sass');
 const cssnano = require('gulp-cssnano');
 const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
+const webpackConfig = require('./webpack.config.js');
 
 function fonts() {
     return gulp.src('src/fonts/**/*')
@@ -16,6 +19,12 @@ function styles() {
         .pipe(rename('styles.css'))
         .pipe(gulp.dest('./public/css'))
         .pipe(browserSync.stream());
+}
+
+function js() {
+    return gulp.src('src/js/index.js')
+        .pipe(webpackStream(webpackConfig), webpack)
+        .pipe(gulp.dest('./public/js'));
 }
 
 function watch() {
@@ -32,3 +41,4 @@ function watch() {
 
 exports.watch = watch;
 exports.fonts = fonts;
+exports.js = js;
