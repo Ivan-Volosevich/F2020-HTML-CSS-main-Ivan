@@ -34,7 +34,11 @@ function watch() {
            index: "../index.html"
         }
     });
-    gulp.watch('src/scss/**/*.scss', styles)
+    fonts();
+    styles();
+    js();
+    gulp.watch('src/js/**/*.js', js);
+    gulp.watch('src/scss/**/*.scss', styles);
     gulp.watch('index.html').on('change', browserSync.reload);
 
 }
