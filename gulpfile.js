@@ -4,20 +4,25 @@ const cssnano = require('gulp-cssnano');
 const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
 
+function fonts() {
+    return gulp.src('src/fonts/**/*')
+        .pipe(gulp.dest('./public/fonts/'));
+}
+
 function styles() {
     return gulp.src('src/scss/main.scss')
         .pipe(sass())
         // .pipe(cssnano())
-        .pipe(rename('main.css'))
-        .pipe(gulp.dest('./css/'))
+        .pipe(rename('styles.css'))
+        .pipe(gulp.dest('./public/css'))
         .pipe(browserSync.stream());
 }
 
 function watch() {
     browserSync.init({
         server: {
-           baseDir: "./",
-           index: "./index.html"
+           baseDir: "./public",
+           index: "../index.html"
         }
     });
     gulp.watch('src/scss/**/*.scss', styles)
@@ -26,3 +31,4 @@ function watch() {
 }
 
 exports.watch = watch;
+exports.fonts = fonts;
