@@ -1,6 +1,8 @@
 @import "./global/_index.scss";
 @import "./components/index";
 
+@import "../../node_modules/bootstrap/scss/bootstrap.scss"
+
 * {
     box-sizing: border-box;
 }

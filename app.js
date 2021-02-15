@@ -71,13 +71,17 @@ app.post('/createUser', function(req, res) {
     });
 });
 
-app.listen(3000, function() {
+app.listen(3001, function() {
     console.log('success');
 });
 
 
 app.get('/login', function(req, res) {
     res.render('login');
+});
+
+app.get('/admin', function(req, res) {
+    res.render('admin');
 });
 
 app.post('/login', function(req, res) {
