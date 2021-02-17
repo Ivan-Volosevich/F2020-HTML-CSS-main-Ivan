@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    nav.navbar.navbar-light.bg-light
+        .container
+            button#cart.btn.btn-primary
+            | Cart
+            span.badge.bg-danger 3
+
+    .container.products
+        .row
+            each item in items
+                .col
+                    .card.product-item
+                        img.card-img-top(src=`${item.image}` alt='')
+                        .card-body
+                            h5.card-title= item.name
+                            p.card-text
+                            | Price: #{item.price}
+                            button(data-id=`${item.id}`).btn.btn-primary Add to cart

@@ -84,6 +84,31 @@ app.get('/admin', function(req, res) {
     res.render('admin');
 });
 
+const items = [
+    {
+        id: 1,
+        name: 'Pizza 1',
+        price: '15',
+        image: 'https://image.freepik.com/free-vector/pizza-vector-sketch_152222-92.jpg'
+    },
+    {
+        id: 2,
+        name: 'Pizza 2',
+        price: '10',
+        image: 'https://image.freepik.com/free-vector/tasty-pepperoni-pizza-vector-illustration_9845-130.jpg'
+    },
+    {
+        id: 3,
+        name: 'Pizza 3',
+        price: '19',
+        image: 'https://lh3.googleusercontent.com/proxy/y9f7067RwzrJVxtDnw19JfbAPRRtCMhtAk_64NQJvO5pBvKRaEFParJzR_dCeA-xGcaG68YleDxd8m5pboDKgQQdJLbL-7NopoCX2K8XxT0'
+    },
+];
+
+app.get('/cart', function(req, res) {          // npx nodemon app
+    res.render('cart', {items: items});
+});
+
 app.post('/login', function(req, res) {
 
     client.query(`SELECT * FROM Users`,

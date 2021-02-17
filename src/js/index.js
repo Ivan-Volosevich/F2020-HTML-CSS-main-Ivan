@@ -1,2 +1,2 @@
-import './components/a';
-import './components/b';
+import './components/cart';
+import './components/product';
