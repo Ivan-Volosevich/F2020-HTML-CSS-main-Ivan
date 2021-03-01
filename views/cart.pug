@@ -7,14 +7,19 @@ block content
             | Cart
             span#badge.badge.bg-danger 0
 
-    .container.products
-        .row
-            each item in items
-                .col
-                    .card.product-item
-                        img.card-img-top(src=`${item.image}` alt='')
-                        .card-body
-                            h5.card-title= item.name
-                            p.card-text
-                            | Price: #{item.price}
-                            button(data-id=`${item.id}`).btn.btn-primary Add to cart
+    .glide.products
+        .glide__track(data-glide-el="track")
+            ul.glide__slides
+                each item in items
+                    li.glide__slide
+                        .card.product-item
+                            img.card-img-top(src=`${item.image}` alt='')
+                            .card-body
+                                h5.card-title= item.name
+                                p.card-text
+                                | Price: #{item.price}
+                                button(data-id=`${item.id}`).btn.btn-primary Add to cart
+        .glide__bullets(data-glide-el="controls[nav]")
+            .glide__bullet(data-glide-dir="=0")
+            .glide__bullet(data-glide-dir="=1")
+            .glide__bullet(data-glide-dir="=2")

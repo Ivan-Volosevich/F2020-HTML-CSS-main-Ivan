@@ -101,7 +101,7 @@ const items = [
         id: 3,
         name: 'Pizza 3',
         price: '19',
-        image: 'https://lh3.googleusercontent.com/proxy/y9f7067RwzrJVxtDnw19JfbAPRRtCMhtAk_64NQJvO5pBvKRaEFParJzR_dCeA-xGcaG68YleDxd8m5pboDKgQQdJLbL-7NopoCX2K8XxT0'
+        image: 'https://www.kindpng.com/picc/m/281-2814759_cheese-vector-pizza-clipart-cheese-pizza-cartoon-hd.png'
     },
 ];
 
